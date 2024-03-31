@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <net.glotch.antsy.TerminalView
+        android:id="@+id/terminalOut"
+        android:layout_width="0dp"
+        android:layout_height="260dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:termFont="@font/moderndos8x16"
+        app:termFontHeight="16"
+        app:termFontWidth="8" />
+
+    <ImageButton
+        android:id="@+id/leftButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/arrow_left_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upButton" />
+
+    <ImageButton
+        android:id="@+id/downButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/arrow_down_bold"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/upButton" />
+
+    <ImageButton
+        android:id="@+id/upButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/arrow_up_bold"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/terminalOut" />
+
+    <ImageButton
+        android:id="@+id/rightButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:background="?attr/selectableItemBackground"
+        android:src="@drawable/arrow_right_bold"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/upButton" />
+
+    <Button
+        android:id="@+id/escButton"
+        android:layout_width="62dp"
+        android:layout_height="49dp"
+        android:text="ESC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disconnectButton" />
+
+    <Button
+        android:id="@+id/disconnectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Disconnect"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terminalOut" />
+
+    <Button
+        android:id="@+id/dumpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="start dump"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/escButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
